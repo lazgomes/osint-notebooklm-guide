@@ -32,7 +32,7 @@ Durante o desenvolvimento deste caderno temático sobre OSINT, foram selecionada
 ## 🤖 3. Engenharia de Prompts e "Cicatrizes"
  
 Durante a interação com a IA, foram testados diversos prompts para extrair informações específicas. Abaixo, documento a evolução das perguntas e as dificuldades encontradas.
-> Decidi remover o HackTricks do escopo para evitar o desvio de finalidade (Pentest de Exploração) e manter o foco estrito em Inteligência de Fontes Abertas (OSINT). 
+> **Nota de Curadoria:** Decidi remover o HackTricks do escopo para evitar o desvio de finalidade (Pentest de Exploração) e manter o foco estrito em Inteligência de Fontes Abertas (OSINT).
 ---
  
 ### 🔎 Prompt 1 — Filtragem de Fontes
@@ -48,7 +48,20 @@ No início, as fontes escolhidas eram muito amplas, incluindo o HackTricks que e
  
 ---
  
-### 🔎 Prompt 2 — Aplicação Prática
+### 🔎 Prompt 2 — Definição e Arsenal Técnico
+
+**Pergunta:**
+> "Explique o que é OSINT com exemplos práticos usados em pentest e cite ferramentas comuns utilizadas por profissionais."
+
+**Resposta obtida:**
+A IA detalhou o papel do OSINT na fase de reconhecimento (passivo e físico), citando ferramentas como **Hunter.io**, **Epieos**, e **Jimpl**, além de destacar o uso de **Breach Data** para validar credenciais expostas.
+
+**💀 Cicatriz:**
+Este prompt foi essencial para sair da teoria e entender como o OSINT é aplicado no "mundo real". A IA inicialmente focou apenas em ferramentas web; precisei forçar a contextualização para Pentest para que ela trouxesse exemplos de reconhecimento físico e infraestrutura.
+
+---
+
+### 🔎 Prompt 3 — Aplicação Prática
  
 **Pergunta:**
 > "Simule um cenário real onde o Google Dorking seria usado em um pentest."
@@ -60,7 +73,7 @@ A IA conectou a técnica de **Google Dorking** à descoberta de arquivos sensív
  
 ---
  
-### 🔎 Prompt 3 — Troubleshooting de Erros
+### 🔎 Prompt 4 — Troubleshooting de Erros
  
 **Pergunta:**
 > "Quais erros iniciantes cometem em OSINT?"
@@ -106,7 +119,21 @@ O OSINT é definido como a coleta e análise de informações de fontes pública
 | **Virtual Machine (VM)** | Ambiente isolado (ex: CSI Linux) que protege o computador principal durante investigações |
  
 ---
- 
+
+### 🛠️ Arsenal de Ferramentas OSINT
+ 
+Com base na curadoria e na interação com a IA, as seguintes ferramentas foram identificadas como essenciais para a prática:
+ 
+| Categoria | Ferramenta | Aplicação Prática |
+|---|---|---|
+| **Investigação de E-mail** | Hunter.io / Epieos | Identificar padrões corporativos e perfis sociais vinculados. |
+| **Geolocalização/Imagens** | Jimpl / PimEyes | Extração de metadados EXIF e reconhecimento facial. |
+| **Pessoas e Usuários** | WhatsMyName / IntelTechniques | Rastreamento de nicknames em múltiplas plataformas. |
+| **Infraestrutura** | Google Dorking / Shodan | Descoberta de servidores e arquivos sensíveis expostos. |
+| **Ambiente Seguro** | CSI Linux / KeePass XC | Sistema operacional isolado e gestão de credenciais. |
+
+---
+
 ### 🔁 Prompts Reutilizáveis para Revisão
  
 > Utilize estes prompts para futuras consultas e revisões sobre o tema:
